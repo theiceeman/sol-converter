@@ -7,21 +7,25 @@ function App() {
   const [sol, setSol] = useState("");
   // const [solUsd, setSolUsd] = useState(148);
 
-  function convertLamport(lamportsInNumber) {
-    if (lamportsInNumber == 0) {
+  const handleSolKeyDown = (event) => {
+    if (event.keyCode === 8 && event.target.value === "0") {
+      event.preventDefault();
       setSol("");
-      setLamports("");
-      return;
     }
+  };
+  
+  const handleLamportsKeyDown = (event) => {
+    if (event.keyCode === 8 && event.target.value === "0") {
+      event.preventDefault();
+      setLamports("");
+    }
+  };
+
+  function convertLamport(lamportsInNumber) {
     setSol((lamportsInNumber / 1000000000).toFixed(9));
   }
 
   function convertSol(solInNumber) {
-    if (solInNumber == 0) {
-      setSol("");
-      setLamports("");
-      return;
-    }
     setLamports(solInNumber * 1000000000);
   }
 
@@ -55,6 +59,7 @@ function App() {
                   type="number"
                   id="lamports"
                   value={lamports}
+                  onKeyDown={handleLamportsKeyDown}
                   onChange={(e) => {
                     setLamports(Number(e.target.value));
                     convertLamport(Number(e.target.value));
@@ -74,6 +79,7 @@ function App() {
                   type="number"
                   id="sol"
                   value={sol}
+                  onKeyDown={handleSolKeyDown}
                   onChange={(e) => {
                     setSol(Number(e.target.value));
                     convertSol(Number(e.target.value));
