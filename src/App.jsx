@@ -36,63 +36,62 @@ function App() {
 
   return (
     <>
-      <div className="flex flex-col font-muli h-screen">
+      <div className="flex flex-col font-muli h-screen w-full md:w-2/4 mx-auto">
         <div className="flex flex-col gap-10 mt-10">
-          <div className=" max-w-[33rem] mx-auto my-auto px-3">
-            <div className="flex py-3 justify-between">
-              <h1 className="text-3xl font-black">
+          <div className="flex mx-auto my-auto w-full text-center justify-center">
+              <h1 className="text-3xl font-black px-auto">
                 <a href="/">Sol Unit Converter</a>
               </h1>
-            </div>
           </div>
-          <div className="flex w-2/4 mx-auto text-[#141d2299]">
+
+          <div className="flex w-full px-5 md:mx-auto text-[#141d2299]">
             <p>
               Lamports are the smallest unit of currency and the base unit of
               account on the Solana blockchain. <br /> One SOL equals one
               billion Lamports.
             </p>
           </div>
-
-          <form className="w-2/4 mx-auto">
-            <div className="flex flex-row mb-5">
-              <label
-                htmlFor="lamports"
-                className="block my-auto text-sm font-medium text-gray-900 w-28"
-              >
-                Lamports:
-              </label>
-              <input
-                type="number"
-                id="lamports"
-                value={lamports}
-                onChange={(e) => {
-                  setLamports(Number(e.target.value));
-                  convertLamport(Number(e.target.value));
-                }}
-                className="bg-gray-50 border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  border-gray-600 placeholder-gray-400"
-                placeholder="lamports"
-              />
-            </div>
-            <div className="flex flex-row mb-5">
-              <label
-                htmlFor="sol"
-                className="block my-auto text-sm font-medium text-gray-900 w-28"
-              >
-                Sol:
-              </label>
-              <input
-                type="number"
-                id="sol"
-                value={sol}
-                onChange={(e) => {
-                  setSol(Number(e.target.value));
-                  convertSol(Number(e.target.value));
-                }}
-                className="bg-gray-50 border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  border-gray-600 placeholder-gray-400"
-                placeholder="sol"
-              />
-            </div>
-            {/* <div className="flex flex-row mb-5">
+          <div className="flex flex-col w-full px-5 md:mx-auto">
+            <form className="">
+              <div className="flex flex-row mb-5">
+                <label
+                  htmlFor="lamports"
+                  className="block my-auto text-sm font-medium text-gray-900 w-28"
+                >
+                  Lamports:
+                </label>
+                <input
+                  type="number"
+                  id="lamports"
+                  value={lamports}
+                  onChange={(e) => {
+                    setLamports(Number(e.target.value));
+                    convertLamport(Number(e.target.value));
+                  }}
+                  className="bg-gray-50 border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  border-gray-600 placeholder-gray-400"
+                  placeholder="lamports"
+                />
+              </div>
+              <div className="flex flex-row mb-5">
+                <label
+                  htmlFor="sol"
+                  className="block my-auto text-sm font-medium text-gray-900 w-28"
+                >
+                  Sol:
+                </label>
+                <input
+                  type="number"
+                  id="sol"
+                  value={sol}
+                  onChange={(e) => {
+                    setSol(Number(e.target.value));
+                    convertSol(Number(e.target.value));
+                  }}
+                  className="bg-gray-50 border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  border-gray-600 placeholder-gray-400"
+                  placeholder="sol"
+                />
+              </div>
+              {/* <div className="flex flex-row mb-5">
               <label
                 htmlFor="email"
                 className="block my-auto text-sm font-medium text-gray-900 w-28"
@@ -106,10 +105,10 @@ function App() {
                 placeholder="lamports"
               />
             </div> */}
-          </form>
+            </form>
+          </div>
 
-          <div className=" flex-grow max-w-[33rem] mx-auto px-3">
-            <div className="flex py-3 justify-between">
+          <div className="flex w-full justify-center">
               <h1 className="text-sm">
                 © 2024
                 <a
@@ -120,7 +119,6 @@ function App() {
                   KelvinIOT
                 </a>
               </h1>
-            </div>
           </div>
         </div>
       </div>
