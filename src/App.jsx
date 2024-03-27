@@ -5,16 +5,7 @@ import { getSolUsdRate } from "./utils/Rates";
 function App() {
   const [lamports, setLamports] = useState("");
   const [sol, setSol] = useState("");
-  const [solUsd, setSolUsd] = useState(148);
-
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     let result = await getSolUsdRate();
-  //     console.log({ result });
-  //   }
-
-  //   fetchData();
-  // }, []);
+  // const [solUsd, setSolUsd] = useState(148);
 
   function convertLamport(lamportsInNumber) {
     if (lamportsInNumber == 0) {
@@ -39,9 +30,9 @@ function App() {
       <div className="flex flex-col font-muli h-screen w-full md:w-2/4 mx-auto">
         <div className="flex flex-col gap-10 mt-10">
           <div className="flex mx-auto my-auto w-full text-center justify-center">
-              <h1 className="text-3xl font-black px-auto">
-                <a href="/">Sol Unit Converter</a>
-              </h1>
+            <h1 className="text-3xl font-black px-auto">
+              <a href="/">Sol Unit Converter</a>
+            </h1>
           </div>
 
           <div className="flex w-full px-5 md:mx-auto text-[#141d2299]">
@@ -109,16 +100,24 @@ function App() {
           </div>
 
           <div className="flex w-full justify-center">
-              <h1 className="text-sm">
-                © 2024
-                <a
-                  className="text-purple-500 hover:underline"
-                  href="https://twitter.com/iotkelvin"
-                >
-                  {" "}
-                  KelvinIOT
-                </a>
-              </h1>
+            <h1 className="text-sm">
+              © 2024
+              <a
+                className="text-purple-500 hover:underline"
+                href="https://twitter.com/iotkelvin"
+              >
+                {" "}
+                KelvinIOT
+              </a>
+              &nbsp;|&nbsp;
+              <a
+                className="text-purple-500 hover:underline"
+                href="https://github.com/theiceeman/sol-converter"
+              >
+                {" "}
+                GitHub
+              </a>
+            </h1>
           </div>
         </div>
       </div>
