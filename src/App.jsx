@@ -45,8 +45,15 @@ function App() {
               </h1>
             </div>
           </div>
+          <div className="flex w-2/4 mx-auto text-[#141d2299]">
+            <p>
+              Lamports are the smallest unit of currency and the base unit of
+              account on the Solana blockchain. <br /> One SOL equals one
+              billion Lamports.
+            </p>
+          </div>
 
-          <form className="w-1/3 mx-auto">
+          <form className="w-2/4 mx-auto">
             <div className="flex flex-row mb-5">
               <label
                 htmlFor="lamports"
@@ -104,7 +111,14 @@ function App() {
           <div className=" flex-grow max-w-[33rem] mx-auto px-3">
             <div className="flex py-3 justify-between">
               <h1 className="text-sm">
-                © 2024<a className="text-purple-500 hover:underline" href="https://twitter.com/iotkelvin"> KelvinIOT</a>
+                © 2024
+                <a
+                  className="text-purple-500 hover:underline"
+                  href="https://twitter.com/iotkelvin"
+                >
+                  {" "}
+                  KelvinIOT
+                </a>
               </h1>
             </div>
           </div>
